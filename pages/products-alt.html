@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | CrickStock</title>
+    <link rel="shortcut icon" href="../assets/favicon.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://tarang-ui.netlify.app/stylesheets/main.css">
+    <link rel="stylesheet" href="../styesheets/pages/products.css">
+</head>
+
+<body>
+    <!-- Header to be inserted dynamically  -->
+
+    <div class="d-flex">
+        <aside class="filters tr-drawer flex-col gap-md pd-md">
+            <div class="d-flex justify-c-space-between">
+                <h2 class="txt-semibold">Filters</h2>
+                <button class="tr-btn tr-btn-transparent">clear</button>
+            </div>
+            <div class="tr-drawer-content flex-col gap-xlg">
+                <div class="tr-card stretch-x">
+                    <h3 class="txt-semibold">Price</h3>
+                    <div class="tr-input-wrapper">
+                        <label class="d-flex justify-c-space-between">
+                            <span class="txt-sm">500</span><span class="txt-sm">2000</span><span class="txt-sm">5000+</span>
+                        </label>
+                        <input type="range" class="stretch-x">
+                    </div>
+                </div>
+                <div class="tr-card stretch-x flex-col gap-md">
+                    <h3 class="txt-semibold">Category</h3>
+                    <div class="flex-col gap-sm">
+                        <div class="tr-input-wrapper">
+                            <label>
+                                <input type="checkbox" class="tr-input-checkbox">
+                                Sneakers
+                            </label>
+                        </div>
+                        <div class="tr-input-wrapper">
+                            <label>
+                                <input type="checkbox" class="tr-input-checkbox">
+                                Casual
+                            </label>
+                        </div>
+                        <div class="tr-input-wrapper">
+                            <label>
+                                <input type="checkbox" class="tr-input-checkbox">
+                                Running
+                            </label>
+                        </div>
+                        <div class="tr-input-wrapper">
+                            <label>
+                                <input type="checkbox" class="tr-input-checkbox">
+                                Formal
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="tr-card stretch-x flex-col gap-md"> -->
+                    <div class="tr-card stretch-x flex-col gap-md">
+                        <h3 class="txt-semibold">
+                            Ratings
+                        </h3>
+                        <div class="tr-input-wrapper">
+                            <label>
+                                <input type="radio" class="tr-input-radio" name='ratings-filter'>
+                                4 stars & above
+                            </label>
+                        </div>
+                        <div class="tr-input-wrapper">
+                            <label>
+                                <input type="radio" class="tr-input-radio" name='ratings-filter'>
+                                3 stars & above
+                            </label>
+                        </div>
+                        <div class="tr-input-wrapper">
+                            <label>
+                                <input type="radio" class="tr-input-radio" name='ratings-filter'>
+                                2 stars & above
+                            </label>
+                        </div>
+                        <div class="tr-input-wrapper">
+                            <label>
+                                <input type="radio" class="tr-input-radio" name='ratings-filter'>
+                                1 stars & above
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tr-card stretch-x flex-col gap-md">
+                        <h3 class="txt-semibold">Sort by</h3>
+                        <div class="tr-input-wrapper">
+                            <label>
+                                <input type="radio" class="tr-input-radio" name='price-range-filter'>
+                                Price - low to high
+                            </label>
+                        </div>
+                        <div class="tr-input-wrapper">
+                            <label>
+                                <input type="radio" class="tr-input-radio" name='price-range-filter'>
+                                Price - High to low
+                            </label>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </aside>
+        <main class="flex-col pd-md gap-lg">
+            <h2 class="txt-left">Showing All Products <small>(20 in total)</small></h2>
+            <div id="productCardsContainer" class="products-container d-grid gap-sm grid-autofit-md">
+                <!-- Product cards to be added dynamically  -->
+            </div>
+        </main>
+    </div>
+
+    <script src="../productsArrays.js"></script>
+    <script src="../insertComponents.js"></script>
+    <script>
+        insertHeader('../');
+        insertHorCards('listedProducts');
+    </script>
+</body>
+
+</html>
