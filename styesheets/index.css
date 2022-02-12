@@ -1,0 +1,46 @@
+@import url(./base.css);
+
+.hero{
+    height: 90vh;
+}
+
+.hero-heading{
+    font-size: clamp(2rem, 10vw - 1rem, 3rem);
+}
+
+
+.hero-banner img{
+    position: relative;
+    top: 50px;
+}
+
+
+.categories .text-overlay{
+    background-color: var(--tr-accent-overlay);
+}
+
+.categories .text-overlay h2{
+    background-color: transparent;
+    color: var(--tr-white);
+    font-size: var(--fs-lg);
+}
+
+.categories .tr-card{
+    padding: 0;
+    overflow: hidden;
+    height: 68%;
+}
+
+.category-cards-container{
+    justify-items: center;
+}
+
+.categories .tr-card img{
+    transition: all ease 0.3s;
+}
+
+.categories .tr-card:hover img{
+    transform: scale(1.2);
+    transition: all ease 0.3s;
+    object-fit: cover;
+}
