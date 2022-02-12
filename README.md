@@ -1,2 +1,2 @@
-# Crickstop-e-comm-store
+# Crickstock-e-comm-store
 - A one stop shop for all your cricketing needs. 
