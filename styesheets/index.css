@@ -17,6 +17,7 @@
 
 .categories .text-overlay{
     background-color: var(--tr-accent-overlay);
+    background-image: linear-gradient(45deg, var(--tr-primary-overlay), var(--tr-accent-overlay));
 }
 
 .categories .text-overlay h2{
@@ -28,7 +29,7 @@
 .categories .tr-card{
     padding: 0;
     overflow: hidden;
-    height: 68%;
+    align-self: stretch;
 }
 
 .category-cards-container{

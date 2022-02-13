@@ -1,6 +1,7 @@
 
 html{
     scroll-behavior: smooth;
+    --bs-lighter: 2px 2px 10px 2px rgb(0 0 0 / 20%);    
 }
 
 header, main, footer{

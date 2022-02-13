@@ -16,14 +16,14 @@ const createHeader = pathToRoot =>{
                     </button>
                 </div>
                 <nav class="tr-nav d-flex gap-md">
-                    <button class="tr-btn tr-btn-link">Login</button>
+                    <a href="${pathToRoot}pages/auth.html" class="tr-btn tr-btn-link">Login</a>
                     <div class="badge-wrapper">
-                        <a href="#" class="tr-btn tr-btn-icon">
+                        <a href="${pathToRoot}pages/wishlist.html" class="tr-btn tr-btn-icon">
                             <i class="fas fa-heart"></i>
                         </a>
                         <div class="badge badge-red">5+</div>
                     </div>
-                    <a href="#" class="tr-btn tr-btn-icon">
+                    <a href="${pathToRoot}pages/cart.html" class="tr-btn tr-btn-icon">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
                 </nav>
@@ -33,11 +33,60 @@ const createHeader = pathToRoot =>{
     return header;
 }
 
+const createVerCard = product =>{
+    const pdtCard = document.createElement('article');
+    pdtCard.innerHTML = `
+                    <button class="heart-icon tr-btn tr-btn-icon">
+                        <i style="font-weight:${product.wishlisted? 900 : 400};" class="fas fa-heart"></i>
+                    </button>
+                    <div class="tr-card-banner">
+                        <img src="${product.imgSrc}"
+                            alt="Shoes">
+                    </div>
+                    <div class="tr-card-header">
+                        <div class="d-flex justify-c-space-between align-i-center">
+                            <h2 class="title">${product.name}</h2> 
+                            <div class="tr-ratings-badge txt-left ratings-sm tr-ratings-badge-green">
+                                <i class="fas fa-star"></i>
+                                <span>${product.ratings}</span>
+                            </div>
+                        </div>
+                        <h3 class="subtitle">${product.brand}</h3>
+                    </div>
+                    <div class="d-flex gap-sm">
+                        <div class="pdt-price">
+                            <span class="curr-price txt-semibold">
+                                ${product.price}
+                            </span>
+                            <span class="prev-price txt-semibold">
+                                ${product.prevPrice}
+                            </span>
+                        </div>
+                        <div class="txt-semibold txt-success">50% off</div>
+                    </div>
+                    <div class="tr-card-footer-links flex-col gap-sm">
+                        <button class="tr-btn tr-btn-secondary">
+                            <i class="fas fa-cart-arrow-down"></i>
+                            ${product.wishlisted ? 'Move to cart':'Add to cart'}
+                        </button>
+                        <button class="tr-btn tr-btn-primary">Buy</button>
+                    </div>
+    `
+    if(product.badge){
+        const badge = document.createElement('div');
+        badge.innerHTML = product.badge;
+        badge.className = 'tr-card-badge';
+        pdtCard.appendChild(badge)
+    }
+    pdtCard.className = 'pdt-card tr-card flex-col gap-md';
+    return pdtCard;
+}
+
 const createHorCard = product =>{
     const pdtCard = document.createElement('article');
     pdtCard.innerHTML = `
                         <button class="heart-icon tr-btn tr-btn-icon">
-                            <i style="font-weight:${product.wishlisted ? 400 : 900};" class="fas fa-heart"></i>
+                            <i style="font-weight:${product.wishlisted ? 900 : 400};" class="fas fa-heart"></i>
                         </button>
                         <div class="tr-card-banner">
                             <img src="${product.imgSrc}"
@@ -98,5 +147,14 @@ const insertHorCards = (productType)=>{
     productsList.forEach(item => {
         const newCard = createHorCard(item);
         horCardsContainer.appendChild(newCard);
+    })
+}
+
+const insertVerCards = (productType) => {
+    const productsList = products[productType]
+    const verCardsContainer = document.getElementById('productCardsContainer');
+    productsList.forEach(item => {
+        const newCard = createVerCard(item)
+        verCardsContainer.appendChild(newCard);
     })
 }

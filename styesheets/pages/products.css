@@ -1,0 +1,39 @@
+@import url(../base.css);
+
+main{
+    flex: 1;
+}
+
+/* Filters Sidebar  */
+
+.filters{
+    max-width: 18rem;
+    padding-bottom: 0;
+    position: sticky;
+    top: 0;
+}
+
+.filters .tr-drawer-content{
+    margin-top: 0;
+    padding: var(--space-xs);
+}
+
+.filters label{
+    color: var(--tr-text-secondary);
+}
+
+/* Products section  */
+.products-container{
+    justify-items: center;
+}
+
+.products-container .tr-card-banner{
+    max-height: 15rem;
+}
+
+@media screen and (max-width:600px) {
+    .filters{
+        position: fixed;
+        left: -100%;
+    }
+}
