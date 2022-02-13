@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist | CrickStock</title>
+    <link rel="shortcut icon" href="../assets/favicon.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://tarang-ui.netlify.app/stylesheets/main.css">
+    <link rel="stylesheet" href="../styesheets/base.css">
+</head>
+<body>
+    <!-- Header will be inserted dynamically  -->
+    
+    <main>
+        <h2 class="txt-center">
+            My Wishlist
+        </h2>
+        <div id="productCardsContainer" class="wishlist-cards d-grid grid-autofit-md gap-md mr-y-lg">
+
+        </div>
+    </main>
+
+
+    <script src="../productsArrays.js"></script>
+    <script src="../insertComponents.js"></script>
+    <script>
+        insertHeader('../',true);
+        insertVerCards('wishlistItems');
+    </script>
+</body>
+</html>

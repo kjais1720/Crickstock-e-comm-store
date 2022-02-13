@@ -1,14 +1,13 @@
-const createHeader = pathToRoot =>{
+const createHeader = (pathToRoot, isLoggedIn) =>{
     const header = document.createElement('header');
+    console.log(isLoggedIn)
     header.innerHTML = `
-                <button class="tr-btn tr-btn-icon hamburger-btn hide">
-                <i class="fas fa-bars"></i>
-                </button>
                 <div class="tr-heading d-flex">
                     <a href='${pathToRoot}' class='logo'>
                         <img src='${pathToRoot}assets/crickstock-logo.jpeg' alt = "Crickstock logo">
                     </a>
                 </div>
+                <a href="${pathToRoot}pages/products.html" class="tr-btn tr-btn-link">Products</a>
                 <div class="tr-input-wrapper d-flex gap-sm">
                     <input type="text" class="tr-input-item" placeholder="Search">
                     <button class="tr-btn tr-btn-icon">
@@ -16,7 +15,7 @@ const createHeader = pathToRoot =>{
                     </button>
                 </div>
                 <nav class="tr-nav d-flex gap-md">
-                    <a href="${pathToRoot}pages/auth.html" class="tr-btn tr-btn-link">Login</a>
+                    <a href="${pathToRoot}pages/${isLoggedIn ? '../':pathToRoot+'auth.html'}" class="tr-btn tr-btn-link">${ isLoggedIn ? 'Logout' : 'Login' }</a>
                     <div class="badge-wrapper">
                         <a href="${pathToRoot}pages/wishlist.html" class="tr-btn tr-btn-icon">
                             <i class="fas fa-heart"></i>
@@ -136,8 +135,8 @@ const createHorCard = product =>{
     return pdtCard;
 }
 
-const insertHeader = (pathToRoot) =>{
-    const newHeader = createHeader(pathToRoot);
+const insertHeader = (pathToRoot, isLoggedIn) =>{
+    const newHeader = createHeader(pathToRoot, isLoggedIn);
     document.body.prepend(newHeader);
 }
 
