@@ -29,8 +29,8 @@ const newArrivals = [
         imgSrc: "https://cdn11.bigcommerce.com/s-tj87duh98/images/stencil/500x500/products/3557/8648/SG_Test_Cricket_Ball_Pink_Cricketershop.com__94879.1624540888.jpg?c=1"
     },
     {
-        name: "Sunridges KW Bat",
-        brand: "Sunridges",
+        name: "MRF KW Bat",
+        brand: "MRF",
         category: "KW",
         ratings: 4.5,
         price: '₹2,999',
