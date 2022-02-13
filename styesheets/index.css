@@ -28,7 +28,7 @@
 .categories .tr-card{
     padding: 0;
     overflow: hidden;
-    height: 68%;
+    align-self: stretch;
 }
 
 .category-cards-container{

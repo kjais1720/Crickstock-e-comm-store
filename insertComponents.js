@@ -16,14 +16,14 @@ const createHeader = pathToRoot =>{
                     </button>
                 </div>
                 <nav class="tr-nav d-flex gap-md">
-                    <button class="tr-btn tr-btn-link">Login</button>
+                    <a href="${pathToRoot}pages/auth.html" class="tr-btn tr-btn-link">Login</a>
                     <div class="badge-wrapper">
-                        <a href="#" class="tr-btn tr-btn-icon">
+                        <a href="${pathToRoot}pages/wishlist.html" class="tr-btn tr-btn-icon">
                             <i class="fas fa-heart"></i>
                         </a>
                         <div class="badge badge-red">5+</div>
                     </div>
-                    <a href="#" class="tr-btn tr-btn-icon">
+                    <a href="${pathToRoot}pages/cart.html" class="tr-btn tr-btn-icon">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
                 </nav>
