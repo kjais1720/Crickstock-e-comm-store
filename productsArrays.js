@@ -233,4 +233,53 @@ const wishlistItems = [
     }
 ]
 
-const products = {newArrivals, listedProducts, wishlistItems};
+
+const cartItems = [
+    {
+        name: "Asics runners",
+        brand: "Asics",
+        category: "Running shoes",
+        ratings: 4.5,
+        price: '₹2,999',
+        prevPrice: '₹4,999',
+        badge: "",
+        new: false,
+        desc:"",
+        wishlisted: false,
+        carted: false,
+        imgSrc:"https://www.rebelsport.com.au/dw/image/v2/BBRV_PRD/on/demandware.static/-/Sites-srg-internal-master-catalog/default/dw2accb3e3/images/61503501/Rebel_61503501_whitelime_hi-res.jpg?sw=233&sh=233&sm=fit"
+    },
+    {
+        name: "SG campus cricket balls",
+        brand: "Sunridges",
+        category: "SG",
+        ratings: 4.5,
+        price: '₹499',
+        prevPrice: '₹999',
+        badge: "",
+        new: false,
+        desc:"",
+        wishlisted: false,
+        carted: false,
+        imgSrc:"https://www.rebelsport.com.au/dw/image/v2/BBRV_PRD/on/demandware.static/-/Sites-srg-internal-master-catalog/default/dwe97b2636/images/58093901/Rebel_58093901_red_hi-res.jpg?sw=233&sh=233&sm=fit"
+        
+    },
+    {
+        name: "Kashmir willow",
+        brand: "Sunridges",
+        category: "KW",
+        ratings: 4.5,
+        price: '₹2,999',
+        prevPrice: '₹4,999',
+        badge: "",
+        new: false,
+        desc:"",
+        wishlisted: false,
+        carted: false,
+        imgSrc:"https://www.rebelsport.com.au/dw/image/v2/BBRV_PRD/on/demandware.static/-/Sites-srg-internal-master-catalog/default/dwd7271bfb/images/61502701/Rebel_61502701_green_hi-res.jpg?sw=233&sh=233&sm=fit"
+
+    }
+    
+]
+
+const products = {newArrivals, listedProducts, wishlistItems, cartItems};
