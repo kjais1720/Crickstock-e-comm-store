@@ -4,20 +4,24 @@
     height: 90vh;
 }
 
+
 .hero-heading{
     font-size: clamp(2rem, 10vw - 1rem, 3rem);
 }
-
 
 .hero-banner img{
     position: relative;
     top: 50px;
 }
 
-
 .categories .text-overlay{
     background-color: var(--tr-accent-overlay);
     background-image: linear-gradient(45deg, var(--tr-primary-overlay), var(--tr-accent-overlay));
+    backdrop-filter: blur(1px);
+}
+
+.categories .text-overlay:hover{
+    backdrop-filter: blur(0px);
 }
 
 .categories .text-overlay h2{
