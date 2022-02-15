@@ -246,7 +246,7 @@ const cartItems = [
         new: false,
         desc:"",
         wishlisted: false,
-        carted: false,
+        carted: true,
         imgSrc:"https://www.rebelsport.com.au/dw/image/v2/BBRV_PRD/on/demandware.static/-/Sites-srg-internal-master-catalog/default/dw2accb3e3/images/61503501/Rebel_61503501_whitelime_hi-res.jpg?sw=233&sh=233&sm=fit"
     },
     {
@@ -260,7 +260,7 @@ const cartItems = [
         new: false,
         desc:"",
         wishlisted: false,
-        carted: false,
+        carted: true,
         imgSrc:"https://www.rebelsport.com.au/dw/image/v2/BBRV_PRD/on/demandware.static/-/Sites-srg-internal-master-catalog/default/dwe97b2636/images/58093901/Rebel_58093901_red_hi-res.jpg?sw=233&sh=233&sm=fit"
         
     },
@@ -275,7 +275,7 @@ const cartItems = [
         new: false,
         desc:"",
         wishlisted: false,
-        carted: false,
+        carted: true,
         imgSrc:"https://www.rebelsport.com.au/dw/image/v2/BBRV_PRD/on/demandware.static/-/Sites-srg-internal-master-catalog/default/dwd7271bfb/images/61502701/Rebel_61502701_green_hi-res.jpg?sw=233&sh=233&sm=fit"
 
     }
