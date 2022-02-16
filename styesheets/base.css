@@ -139,10 +139,6 @@ i.fas.icon-filled{
     font-weight: 900;
 }
 
-/* .icon-outline{
-    font-weight: 400;
-} */
-
 /* Cards  */
 .tr-card{
     background-color: var(--tr-background);
@@ -228,6 +224,13 @@ i.fas.icon-filled{
     border-radius: 0 var(--space-xs) var(--space-xs) 0;
 }
 
+
+/* Carts  */
+.cart-summary{
+    position: sticky;
+    top: 0;
+    max-width: 20rem;
+}
 
 @media screen and (max-width: 600px) {
     .hamburger{

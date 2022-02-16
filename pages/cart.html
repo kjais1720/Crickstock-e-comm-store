@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | CrickStock</title>
+    <link rel="shortcut icon" href="../assets/favicon.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://tarang-ui.netlify.app/stylesheets/main.css">
+    <link rel="stylesheet" href="../styesheets/base.css">
+</head>
+<body>
+    <!-- Header will be inserted dynamically  -->
+    <main class="pd-md">
+        <h2 class="txt-center">My cart</h2>
+        <div class="d-flex f-wrap justify-c-center align-i-start gap-xlg pd-y-lg">
+            <div id="productCardsContainer" class="cart-items flex-col gap-md">
+                <!-- Cart Items to be added dynamically  -->
+            </div>
+            <aside class="cart-summary tr-card flex-col gap-md pd-md">
+                <h3 class="txt-semibold">Price details</h3>
+                <hr>
+                <div class="flex-col">
+                    <div class="d-flex justify-c-space-between">
+                        <span>Price (2 items)</span> <span>₹4,000</span>
+                    </div>
+                    <div class="d-flex justify-c-space-between">
+                        <span class="txt-success">Discount</span> <span class="txt-success">-₹1,000</span>
+                    </div>
+                    <div class="d-flex justify-c-space-between">
+                        <span>Delivery charges</span> <span>₹100</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-c-space-between">
+                    <h3>TOTAL AMOUNT</h3> <h3>₹3,100</h3>
+                </div>
+
+                <p>You will save ₹1,000 on this order</p>
+                <button class="tr-btn tr-btn-cta">PLACE ORDER</button>
+            </aside>
+        </div>
+    </main>
+    <script src="../utils.js"></script>
+    <script src="../productsArrays.js"></script>
+    <script src="../insertComponents.js"></script>
+    <script>
+        insertHeader('../');
+        insertHorCards('cartItems');
+        fillIconOnClick('.heart-icon i.fas');
+
+    </script>
+</body>
+</html>
