@@ -57,6 +57,10 @@ footer{
     gap: var(--space-xs);
 }
 
+.txt-accent{
+    color: var(--tr-accent-color);
+}
+
 /* Header */
 
 .tr-header{
