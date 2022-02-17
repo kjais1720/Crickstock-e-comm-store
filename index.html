@@ -15,19 +15,12 @@
     <!-- Header to be inserted dynamically  -->
 
     <main>
-        <section class="hero d-grid grid-col-2">
-            <div class="hero-text flex-col justify-c-center gap-md">
-                <h1 class="hero-heading">
-                    Shop from the best ever collection of cricket gears
-                </h1>
-                <p class="hero-desc txt-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut rerum voluptates
-                    temporibus veniam praesentium consectetur libero dolores inventore eos saepe.</p>
-                <div class="cta">
-                    <a href="#categories" class="tr-btn tr-btn-cta">Shop now</a>
-                </div>
-            </div>
-            <div class="hero-banner txt-center bg-primary">
-                <img src="./assets/hero-banner-2.png" alt="A boy wearing full cricket gear">
+        <section class="hero flex-col justify-c-center">
+            <h1 class="hero-heading">
+                Shop from the best ever collection of cricket gears
+            </h1>
+            <div class="cta">
+                <a href="#categories" class="tr-btn tr-btn-cta">Shop now</a>
             </div>
         </section>
 
@@ -84,13 +77,12 @@
     </main>
 
 
+    <script src="./utils.js"></script>
     <script src="./productsArrays.js"></script>
     <script src="./insertComponents.js"></script>
-    <script src="./utils.js"></script>
     <script>
         insertHeader('./');
         insertHorCards('newArrivals');
-        togglePageMenu();
         fillIconOnClick('.heart-icon i.fas');
     </script>
 </body>

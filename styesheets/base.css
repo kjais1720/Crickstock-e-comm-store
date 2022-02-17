@@ -2,11 +2,13 @@
 html{
     scroll-behavior: smooth;
     --bs-lighter:2px 2px 10px 2px rgb(0 0 0 / 20%);
+    --bg-gradient-overlay: linear-gradient(45deg, var(--tr-primary-overlay), var(--tr-accent-overlay));
+    --padding-fluid-lg: var(--space-sm) clamp(var(--space-sm), -0.875rem + 8.33vw, var(--space-xxlg));
 }
 
 header, main, footer{
     padding: 0 var(--space-xlg); /* Fallback value */
-    padding: var(--space-sm) clamp(var(--space-sm), -0.875rem + 8.33vw, var(--space-xxlg))
+    padding: var(--padding-fluid-lg);
 }
 
 body{
