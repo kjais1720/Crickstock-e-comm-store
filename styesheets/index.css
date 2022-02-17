@@ -1,22 +1,48 @@
 @import url(./base.css);
 
-.hero{
-    height: 90vh;
+main{
+    padding: 0;
 }
 
+section{
+    padding: var(--padding-fluid-lg);
+}
+
+.hero{
+    position: relative;
+    height: 80vh;
+    background-image: url(../assets/hero-banner-2.webp);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--tr-gray-overlay);
+    background-image: var(--bg-gradient-overlay);
+}
+
+.hero >*{
+    position: relative;
+    z-index: 1;
+}
 
 .hero-heading{
     font-size: clamp(2rem, 10vw - 1rem, 3rem);
+    color: var(--tr-background);
+    max-width: 30ch;
 }
 
-.hero-banner img{
-    position: relative;
-    top: 50px;
+.cta .tr-btn{
+    font-size: 1.2rem;
+
 }
 
 .categories .text-overlay{
     background-color: var(--tr-accent-overlay);
-    background-image: linear-gradient(45deg, var(--tr-primary-overlay), var(--tr-accent-overlay));
+    background-image: var(--bg-gradient-overlay);
     backdrop-filter: blur(1px);
 }
 
