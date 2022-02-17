@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Crickstock</title>
+    <link rel="shortcut icon" href="../assets/favicon.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="../styesheets/base.css">
+</head>
+<body>
+    <!-- Header will be inserted dynamically  -->
+    
+    <main>
+        
+        <div class="auth-form-container pdt-card tr-card tr-card-hor d-flex mr-y-xlg">
+            <div class="tr-card-banner">
+                <img class="img-responsive" src='../assets/undraw_secure_login_pdn4.svg' alt="A woman opening a door">
+            </div>
+
+            <div class="form-body flex-col align-i-center">
+                <div class="d-flex form-toggle-buttons justify-c-center stretch-x">
+                    <button data-target='login-form' class=" tr-btn tr-btn-primary">Login</button>
+                    <button data-target='signup-form' class=" tr-btn tr-btn-outline-primary">Sign-Up</button>
+                </div>
+
+                <form id="login-form" class='active auth-form flex-col gap-sm align-i-center' action="../index.html">
+                    <p>Login with</p>
+                    <div class="d-flex gap-sm">
+                        <button class="tr-btn tr-btn-icon"><i class="fab fa-facebook"></i></button>
+                        <button class="tr-btn tr-btn-icon"><i class="fab fa-twitter"></i></button>
+                        <button class="tr-btn tr-btn-icon"><i class="fab fa-google"></i></button>
+                    </div>
+                    <p class="txt-md">or</p>
+                    <div class="input-form-wrapper">
+                        <label for="email">Email</label>
+                        <input class="tr-input-item" id="email" type="email" required autofocus autocomplete="off">
+                    </div>
+                    <div class="input-form-wrapper">
+                        <label for="password">Password</label>
+                        <input class="tr-input-item" id="password" type="Password" required>
+                    </div>
+                    <div class="d-flex justify-c-space-between stretch-x">
+                        <label class="txt-md">
+                            <input type="checkbox" name="rememberMe" class="tr-input-checkbox">
+                            remember me
+                        </label>
+                        <a href="#" class="txt-md txt-accent">Forgot password?</a>
+                    </div>
+                    <button class='tr-btn tr-btn-cta stretch-x' type="submit" class="btn btn-focus">Login</button>
+                </form>
+
+                <form id='signup-form' class='auth-form flex-col gap-sm align-i-center' action='../index.html'>
+                    <p>Sign-Up with</p>
+                    <div class="d-flex gap-sm">
+                        <button class="tr-btn tr-btn-icon"><i class="fab fa-facebook"></i></button>
+                        <button class="tr-btn tr-btn-icon"><i class="fab fa-twitter"></i></button>
+                        <button class="tr-btn tr-btn-icon"><i class="fab fa-google"></i></button>
+                    </div>
+                    <p class="txt-md">or</p>
+                    <div class="input-form-wrapper">
+                        <label for="name">Full Name</label>
+                        <input class="tr-input-item" id="name" name="Full Name" type="text" required autofocus autocomplete="off">
+                    </div>
+                    <span id="errorname"></span>
+                    <div class="input-form-wrapper">
+                        <label for="email">Email</label>
+                        <input class="tr-input-item" name="Email" id="email" type="email" required autocomplete="off">
+                    </div>
+                    <span id="erroremail"></span>
+                    <div class="input-form-wrapper">
+                        <label for="password">Password</label>
+                        <input class="tr-input-item" name='Password' id="password" type="Password" required>
+                    </div>
+                    <span id="errorpassword"></span>
+                    <div class="input-form-wrapper">
+                        <label for="password">Confirm password</label>
+                        <input class="tr-input-item" name="confPassword" id="re-password" type="Password" required>
+                    </div>
+                    <label class="txt-md">
+                        <input type="checkbox" name="rememberMe" class="tr-input-checkbox">
+                        I accept all <a href="#" class="txt-accent">Terms & conditions</a>
+                    </label>
+                    <button type="submit" class="tr-btn tr-btn-cta stretch-x">Sign-Up</button>
+                </form>
+            </div>
+        </div>        
+    </main>
+
+    <script src="../utils.js"></script>
+    <script src="../productsArrays.js"></script>
+    <script src="../insertComponents.js"></script>
+    <script>
+        insertHeader('../');
+        const toggleForm = ()=>{
+            const formToggleBtn = document.querySelectorAll('.form-toggle-buttons .tr-btn');
+            let currentActiveBtn = formToggleBtn[0];
+            let currentActiveForm = document.querySelector('.auth-form.active');
+            formToggleBtn.forEach(btn=>{
+                btn.addEventListener('click',e =>{
+                const formToOpen = document.getElementById(e.target.getAttribute("data-target"));
+                currentActiveBtn.classList.remove('tr-btn-primary')
+                currentActiveBtn.classList.add('tr-btn-outline-primary');
+                currentActiveForm.classList.remove('active');
+
+                e.target.classList.remove('tr-btn-outline-primary')
+                e.target.classList.add('tr-btn-primary');
+                formToOpen.classList.add('active');
+
+                currentActiveBtn = e.target;
+                currentActiveForm = formToOpen;
+                })
+            })
+        }
+        toggleForm();
+    </script>
+</body>
+</html>
