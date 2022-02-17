@@ -239,12 +239,28 @@ i.fas.icon-filled{
 }
 
 @media screen and (max-width: 600px) {
+    :root{
+        font-size: 14px;
+    }
     .hamburger{
         display: block;
     }
+    .tr-header{
+        overflow: hidden;
+        height: 5rem;
+        transition: height ease 0.3s;
+    }
+
+    .tr-header.active{
+        height: 13rem;
+        overflow: unset;
+    }
+
+    .tr-header.showOverflow{
+        overflow: unset;
+    }
 
     .header-menu{
-        /* display: none; */
         width: 100%;
         flex-direction: column;
         order: 1;
