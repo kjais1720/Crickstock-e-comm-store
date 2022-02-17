@@ -204,6 +204,10 @@ i.fas.icon-filled{
     max-width: 50rem;
 }
 
+.auth-form-container .tr-card-banner img{
+    object-fit: contain;
+}
+
 .form-body,
 .form-toggle-btn
 {
@@ -274,5 +278,13 @@ i.fas.icon-filled{
     .header-menu .tr-nav {
         width: 100%;
         justify-content: center;
+    }
+
+    .auth-form-container{
+        flex-direction: column;
+    }
+
+    .auth-form-container .tr-card-banner{
+        max-width: 100%;
     }
 }
