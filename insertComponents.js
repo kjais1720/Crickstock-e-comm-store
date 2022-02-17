@@ -160,6 +160,7 @@ const insertHeader = (pathToRoot) =>{
     const newHeader = createHeader(pathToRoot);
     document.body.prepend(newHeader);
     togglePageMenu();
+    toggleHeaderMenu();
 }
 
 const insertVerCards = (productType) => {

@@ -3,6 +3,17 @@ const fillIconOnClick = iconsSelector =>{
     icons.forEach(btn=> btn.addEventListener('click',()=>btn.classList.toggle('icon-filled')))
 }
 
+const toggleHeaderMenu = ()=>{
+    const hamburgerIcon = document.querySelector('.hamburger');
+    const header = document.querySelector('.tr-header');
+    
+    hamburgerIcon.addEventListener('click',()=> {
+        header.classList.toggle('active')
+        // setTimeout(()=>header.classList.toggle('showOverflow'), 300)
+    });
+}
+
+
 const togglePageMenu = () => {
     const toggleBtn = document.querySelector('.page-menu-btn');
     const pageMenu = document.querySelector('.page-menu');

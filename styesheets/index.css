@@ -75,3 +75,9 @@ section{
     transition: all ease 0.3s;
     object-fit: cover;
 }
+
+@media screen and (max-width: 500px){
+    #productCardsContainer{
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+}

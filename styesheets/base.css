@@ -204,6 +204,10 @@ i.fas.icon-filled{
     max-width: 50rem;
 }
 
+.auth-form-container .tr-card-banner img{
+    object-fit: contain;
+}
+
 .form-body,
 .form-toggle-btn
 {
@@ -239,12 +243,28 @@ i.fas.icon-filled{
 }
 
 @media screen and (max-width: 600px) {
+    :root{
+        font-size: 14px;
+    }
     .hamburger{
         display: block;
     }
+    .tr-header{
+        overflow: hidden;
+        height: 5rem;
+        transition: height ease 0.3s;
+    }
+
+    .tr-header.active{
+        height: 13rem;
+        overflow: unset;
+    }
+
+    .tr-header.showOverflow{
+        overflow: unset;
+    }
 
     .header-menu{
-        /* display: none; */
         width: 100%;
         flex-direction: column;
         order: 1;
@@ -258,5 +278,13 @@ i.fas.icon-filled{
     .header-menu .tr-nav {
         width: 100%;
         justify-content: center;
+    }
+
+    .auth-form-container{
+        flex-direction: column;
+    }
+
+    .auth-form-container .tr-card-banner{
+        max-width: 100%;
     }
 }
