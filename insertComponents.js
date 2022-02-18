@@ -164,9 +164,9 @@ const createFooter = () =>{
     footer.innerHTML = `
             <div class="d-grid grid-autofit-md">
                 <div class="flex-col brand-info">
-                    <div class="logo">
-                        <img src="/assets/crickstock-logo.png" alt="Crickstock logo">
-                    </div>
+                    <a href='/' class='logo'>
+                        <img src='/assets/crickstock-logo.png' alt = "Crickstock logo">
+                    </a>
                     <div class="txt-white">
                         <i class="fas fa-map-marker-alt"></i>
                         Shree Krishna Nagar, Laheriasarai, Darbhanga, Bihar - 846001.
