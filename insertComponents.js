@@ -106,13 +106,13 @@ const createVerCard = product =>{
     return pdtCard;
 }
 
-const createHeader = pathToRoot =>{
+const createHeader = userIsLoggedIn =>{
     const header = document.createElement('header');
     header.innerHTML = `
 
                 <div class="tr-heading d-flex">
-                    <a href='${pathToRoot}' class='logo'>
-                        <img src='${pathToRoot}assets/crickstock-logo.jpeg' alt = "Crickstock logo">
+                    <a href='/' class='logo'>
+                        <img src='/assets/crickstock-logo.png' alt = "Crickstock logo">
                     </a>
                 </div>
                 <div class='header-menu d-flex justify-c-space-between'>
@@ -128,23 +128,26 @@ const createHeader = pathToRoot =>{
                                 <i class="fas fa-caret-down"></i>
                             </button>
                             <ul class='flex-col page-menu'>
-                                <a href= "${pathToRoot}pages/products.html">Cricket Bats</a>
-                                <a href= "${pathToRoot}pages/products.html">Cricket Balls</a>
-                                <a href= "${pathToRoot}pages/products.html">Cricket Shoes</a>
-                                <a href= "${pathToRoot}pages/products.html">Cricket Gears</a>
+                                <a href= "/pages/products.html">Cricket Bats</a>
+                                <a href= "/pages/products.html">Cricket Balls</a>
+                                <a href= "/pages/products.html">Cricket Shoes</a>
+                                <a href= "/pages/products.html">Cricket Gears</a>
 
                             </ul>
                         </div>
-                        <a href= "${pathToRoot}pages/auth.html" class="tr-btn tr-btn-link">Login</a>
+                        <a href= "/pages/auth.html" class="tr-btn tr-btn-link">${userIsLoggedIn ? 'Logout' : 'Login'}</a>
                         <div class="badge-wrapper">
-                            <a href="${pathToRoot}pages/wishlist.html" class="tr-btn tr-btn-icon">
+                            <a href="/pages/wishlist.html" class="tr-btn tr-btn-icon">
                                 <i class="fas fa-heart"></i>
                             </a>
                             <div class="badge badge-red">5+</div>
                         </div>
-                        <a href="${pathToRoot}pages/cart.html" class="tr-btn tr-btn-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
+                        <div class="badge-wrapper">
+                            <a href="/pages/cart.html" class="tr-btn tr-btn-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                            <div class="badge badge-red">3</div>
+                        </div>
                     </nav>
                 </div>
                 <button class="tr-btn tr-btn-icon hamburger">
@@ -156,9 +159,87 @@ const createHeader = pathToRoot =>{
     return header;
 }
 
-const insertHeader = (pathToRoot) =>{
-    const newHeader = createHeader(pathToRoot);
-    document.body.prepend(newHeader);
+const createFooter = () =>{
+    const footer = document.createElement('footer');
+    footer.innerHTML = `
+            <div class="d-grid grid-autofit-md">
+                <div class="flex-col brand-info">
+                    <div class="logo">
+                        <img src="/assets/crickstock-logo.png" alt="Crickstock logo">
+                    </div>
+                    <div class="txt-white">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Shree Krishna Nagar, Laheriasarai, Darbhanga, Bihar - 846001.
+                    </div>
+                    <div class="txt-white">
+                        <i class="fas fa-envelope"></i>
+                        jaiswalkrituraj20@gmail.com
+                    </div>
+                </div>
+                <div class="flex-col justify-c-center">
+                    <p class='txt-white txt-lg txt-center'>Subscribe to get updates on offers</p>
+                    <div class="d-flex gap-sm">
+                        <input type="text" aria-label="Enter your Email" placeholder = 'Email' class="tr-input-item">
+                        <button class="tr-btn tr-btn-cta">Subscribe</button>
+                    </div>
+                </div>
+                <div class="d-flex justify-c-center gap-sm">
+                    <ul class="flex-col">
+                        <h3 class="txt-white pd-sm txt-left">Quick links</h3>
+                        <li>
+                            <a href="/pages/wishlist.html" class="tr-btn tr-btn-link">Wishlist</a>
+                        </li>
+                        <li>
+                            <a href="/pages/cart.html" class="tr-btn tr-btn-link">Cart</a>
+                        </li>
+                        <li>
+                            <a href="/pages/auth.html" class="tr-btn tr-btn-link">Login/Signup</a>
+                        </li>
+                    </ul>
+                    <ul class="flex-col">
+                        <h3 class="txt-white pd-sm txt-left">Products</h3>
+                        <li>
+                            <a href="/pages/products.html" class="tr-btn tr-btn-link">Cricket Bats</a>
+                        </li>
+                        <li>
+                            <a href="/pages/products.html" class="tr-btn tr-btn-link">Cricket Balls</a>
+                        </li>
+                        <li>
+                            <a href="/pages/products.html" class="tr-btn tr-btn-link">Cricket Shoes</a>
+                        </li>
+                        <li>
+                            <a href="/pages/products.html" class="tr-btn tr-btn-link">Cricket Gears</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="author-info flex-col align-i-center gap-sm">
+                <ul class="d-flex gap-sm">
+                    <a target="_blank" href="https://twitter.com/kjais1720" class="tr-btn tr-btn-icon" aria-label="Twitter link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a target="_blank" href="https://github.com/kjais1720" class="tr-btn tr-btn-icon" aria-label="Github link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a target="_blank" href="https://linkedin.com/in/krituraj-anand" class="tr-btn tr-btn-icon" aria-label="LinkedIn link">
+                        <i class="fab fa-linkedin"></i>    
+                    </a>
+                </ul>
+                <p class="txt-white">Created by<a target="_blank" href="https://kjais-portfolio.vercel.app" class="tr-btn tr-btn-link">Krituraj Anand</a> </p>
+            </div>
+    `
+    footer.className = 'bg-primary';
+    return footer;
+}
+
+
+const insertHeaderAndFooter = userIsLoggedIn => {
+    const header = createHeader(userIsLoggedIn);
+    const footer = createFooter();
+    document.body.prepend(header);
+    document.body.append(footer);
+
     togglePageMenu();
     toggleHeaderMenu();
 }
@@ -170,6 +251,7 @@ const insertVerCards = (productType) => {
         const newCard = createVerCard(item)
         verCardsContainer.appendChild(newCard);
     })
+    fillIconOnClick('.heart-icon i.fas');
 }
 
 const insertHorCards = (productType)=>{
@@ -179,4 +261,5 @@ const insertHorCards = (productType)=>{
         const newCard = createHorCard(item);
         horCardsContainer.appendChild(newCard);
     })
+    fillIconOnClick('.heart-icon i.fas');
 }
