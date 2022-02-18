@@ -176,16 +176,16 @@ const createFooter = () =>{
                         crickstock@gmail.com
                     </div>
                 </div>
-                <div class="flex-col justify-c-center">
-                    <p class='txt-white txt-lg txt-center'>Subscribe to get updates on offers</p>
-                    <div class="d-flex gap-sm">
+                <div class="subscribe flex-col">
+                    <h3 class='txt-white'>Subscribe to get updates about latest offers</h3>
+                    <div class="d-flex">
                         <input type="text" aria-label="Enter your Email" placeholder = 'Email' class="tr-input-item">
                         <button class="tr-btn tr-btn-cta">Subscribe</button>
                     </div>
                 </div>
                 <div class="d-flex justify-c-center gap-sm">
-                    <ul class="flex-col">
-                        <h3 class="txt-white pd-sm txt-left">Quick links</h3>
+                    <ul class="footer-links flex-col">
+                        <h3 class="txt-white txt-left">Quick links</h3>
                         <li>
                             <a href="/pages/wishlist.html" class="tr-btn tr-btn-link">Wishlist</a>
                         </li>
@@ -196,8 +196,8 @@ const createFooter = () =>{
                             <a href="/pages/auth.html" class="tr-btn tr-btn-link">Login/Signup</a>
                         </li>
                     </ul>
-                    <ul class="flex-col">
-                        <h3 class="txt-white pd-sm txt-left">Products</h3>
+                    <ul class="footer-links flex-col">
+                        <h3 class="txt-white txt-left">Products</h3>
                         <li>
                             <a href="/pages/products.html" class="tr-btn tr-btn-link">Cricket Bats</a>
                         </li>

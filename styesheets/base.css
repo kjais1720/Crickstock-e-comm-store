@@ -6,6 +6,8 @@ html{
     --padding-fluid-lg: var(--space-sm) clamp(var(--space-sm), -0.875rem + 8.33vw, var(--space-xxlg));
 }
 
+/* Common CSS  */
+
 header, main, footer{
     padding: 0 var(--space-xlg); /* Fallback value */
     padding: var(--padding-fluid-lg);
@@ -28,26 +30,12 @@ h3, h4, h5, h6{
     color: var(--tr-text);
 }
 
-/* Layouts  */
-header{
-    grid-area: header;
-}
-
-aside{
-    grid-area: aside;
-}
-
-main{
-    grid-area: main;
-}
-
-footer{
-    margin-top: var(--space-xlg);
-    min-height: 30vh;
-}
-
 #productCardsContainer{
     justify-items: center;
+}
+
+.tr-btn-cta {
+    color: var(--tr-primary-color);
 }
 
 /* Utilitties  */
@@ -93,7 +81,7 @@ footer{
 }
 
 .logo{
-    width: clamp(12rem, 20vw, 17rem);
+    width: clamp(12rem, 20vw, 20rem);
 }
 
 .tr-header .tr-btn-icon i.fas{
@@ -155,6 +143,7 @@ i.fas.icon-filled{
 }
 
 /* Cards  */
+
 .tr-card{
     background-color: var(--tr-background);
     box-shadow: var(--bs-lighter);
@@ -251,6 +240,28 @@ i.fas.icon-filled{
     max-width: 20rem;
 }
 
+/* Footer  */
+
+footer{
+    margin-top: var(--space-xlg);
+    padding: var(--space-xlg) clamp(var(--space-sm), -0.875rem + 8.33vw, var(--space-xxlg)) var(--space-xs);
+}
+
+.subscribe input{
+    border: none;
+    border-radius: var(--space-xs) 0 0 var(--space-xs);
+}
+
+.subscribe .tr-btn-cta{
+    border-radius: 0 var(--space-xs) var(--space-xs) 0;
+}
+
+.footer-links h3{
+    padding: 0 var(--space-sm);
+}
+
+
+
 @media screen and (max-width: 600px) {
     :root{
         font-size: 14px;
@@ -260,7 +271,7 @@ i.fas.icon-filled{
     }
     .tr-header{
         overflow: hidden;
-        height: 5rem;
+        height: 4.5rem;
         transition: height ease 0.3s;
     }
 
@@ -274,20 +285,22 @@ i.fas.icon-filled{
     }
 
     .header-menu{
-        width: 100%;
         flex-direction: column;
         order: 1;
         gap: var(--space-sm);
     }
 
-    .header-menu .tr-input-wrapper{
+    .header-menu,
+    .header-menu .tr-input-wrapper,
+    .header-menu .tr-nav{
         width: 100%;
     }
 
     .header-menu .tr-nav {
-        width: 100%;
         justify-content: center;
     }
+
+    /* Authentication page  */
 
     .auth-form-container{
         flex-direction: column;
@@ -302,7 +315,9 @@ i.fas.icon-filled{
         gap: var(--space-md);
     }
 
-    footer .brand-info{
+    footer .brand-info,
+    footer .subscribe
+    {
         text-align: center;
     }
 
