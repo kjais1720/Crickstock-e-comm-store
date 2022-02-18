@@ -169,11 +169,11 @@ const createFooter = () =>{
                     </a>
                     <div class="txt-white">
                         <i class="fas fa-map-marker-alt"></i>
-                        Shree Krishna Nagar, Laheriasarai, Darbhanga, Bihar - 846001.
+                        123 - Maple street, Anytown, CA 171001
                     </div>
                     <div class="txt-white">
                         <i class="fas fa-envelope"></i>
-                        jaiswalkrituraj20@gmail.com
+                        crickstock@gmail.com
                     </div>
                 </div>
                 <div class="flex-col justify-c-center">
