@@ -29,9 +29,18 @@ const togglePageMenu = () => {
 const toggleFilterSidebar = () => {
     const filterToggleBtn = document.querySelector('.filter-btn');
     const filterSidebar = document.querySelector('aside.filters');
-    filterToggleBtn.addEventListener('click',()=>{
-        filterToggleBtn.classList.toggle('fa-filter');
-        filterToggleBtn.classList.toggle('fa-times');
+    const filterWrapper = filterSidebar.parentElement
+    filterToggleBtn.addEventListener('click',e =>{
         filterSidebar.classList.toggle('active');
+        filterWrapper.classList.toggle('active');
+        e.stopPropagation();
     })
+
+    filterSidebar.addEventListener('click',e=>e.stopPropagation())
+
+    filterWrapper.addEventListener('click',e=>{
+        filterWrapper.classList.remove('active');
+        filterSidebar.classList.remove('active')
+    })
+
 }
